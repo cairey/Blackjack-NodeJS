@@ -7,7 +7,7 @@ var hosting = {
 	port : process.argv[2] 
 			|| process.env.PORT 
 			|| process.env.C9_PORT 
-			|| 80
+			|| 8000
 };
 
 
@@ -21,8 +21,8 @@ application.configure(function() {
 
 application.get('/', function(req, res){
 
-	var hand = new blackjack.Hand();
-	res.render('index.jade', hand);
+	var deck = new blackjack.Deck();
+	res.render('index.jade', deck);
 });
 
-application.listen(hosting.port);
+application.listen(8000);

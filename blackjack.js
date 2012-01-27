@@ -1,9 +1,40 @@
+function Card(displayValue, suit, value) {
+    this.displayValue;
+    this.suit;
+    this.value
+};
 
-exports.Hand = function(){
 
-  var values = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
-  var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+Card.prototype.IsAce(){
+    if(this.displayValue == 'Ace'){
+        return true;
+    }
 
-  this.cards = ['3 diamonds', '6 clubs'];
+    return false;
+};
+
+
+
+function DeckGenerator() {
+
+var values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
+var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
+var deck = [];
+
+for (var v = 1; v < values.length + 1; v++) {
+    
+    for (var s = 0; s < suits.length; s++) {
+            deck.push(new Card(values[v], suits[s], v);
+        }
+    }
+
+    return deck;
+};
+
+
+exports.Deck = function(numberOfDecks) {
+
+    var deck = DeckGenerator();
+    return deck;
 
 };
