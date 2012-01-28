@@ -44,7 +44,7 @@ Card.prototype.isAce = function () {
 
 
 
-function DeckGenerator(howManyDecksOfCards) {
+function deckGenerator(howManyDecksOfCards) {
 
     var values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
     var suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
@@ -64,7 +64,7 @@ function DeckGenerator(howManyDecksOfCards) {
 
 function Deck() {
     console.log('creating new deck');
-    this.deckStack = DeckGenerator(options.howManyDeckOfCards);
+    this.deckStack = deckGenerator(options.howManyDeckOfCards);
 }
 
 Deck.prototype.shuffle = function () {
