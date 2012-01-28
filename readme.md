@@ -1,6 +1,1 @@
-Twofour Learning Labs
-=====================
-
-Week 1 - Nodejs
-----------------
-Getting started
+Blackjack game using a stack array to simulate a deck of playing cards.
