@@ -1,0 +1,17 @@
+html
+	body
+		ul
+			each card, i in model.playersHand.cards
+				li #{card.displayValue}	
+		br
+		span Your total: #{model.playersHand.total()}
+		br
+		span Dealers total: #{model.dealersHand.total()} 
+		br
+		br
+		if (model.playersHand.total() > model.dealersHand.total()) || model.dealersHand.bust()
+			strong You win! 
+		else
+			strong You lose! 
+
+		a(href='/') New Game

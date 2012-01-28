@@ -1,3 +1,16 @@
 html
 	body
-		span= deck[0] + " " + deck[1]
+		ul
+			each card, i in model.playersHand.cards
+				li #{card.displayValue}	
+		br
+		span Your total: #{model.playersHand.total()} 
+		if model.playersHand.bust()
+			br
+			br
+			strong You lose! 
+			a(href='/') New Game
+		else
+			a(href='/twist') Twist
+			span &nbsp;or 
+			a(href='/stick') Stick
