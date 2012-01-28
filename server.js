@@ -47,8 +47,6 @@ application.get('/twist', function (req, res) {
 
 application.get('/stick', function (req, res) {
 
-    game.dealersHand.dealCard(game.deck.getCard());
-
     while(game.dealersHand.total() <= 12){
         game.dealersHand.dealCard(game.deck.getCard());
     }
